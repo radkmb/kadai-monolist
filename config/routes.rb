@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   
   resources :items, only: [:show, :new]
   resources :ownerships, only: [:create, :destroy]
+  
+  # ランキング機能
+  get 'rankings/want', to: 'rankings#want'
 end
